@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const operands = expression.split('/');
       result = parseFloat(operands[0]) / parseFloat(operands[1]);
     }
-    return result;
+    if (result % 1 == 0) return result
+    else return result.toFixed(2)
   }
   
